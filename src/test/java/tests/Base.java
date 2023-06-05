@@ -41,7 +41,7 @@ public class Base {
 
         try{
             Files.move(screenshot,
-                    new File("C:\\Users\\rodrigo.gomez\\Documents\\Testingqa\\SeleniumPOMSimple\\src\\test\\resources\\screanshot\\test.png"));
+                    new File("C:\\Users\\rodrigo.gomez\\Documents\\Testingqa\\SeleniumPOMSimple\\src\\test\\resources\\screanshot\\test1.png"));
         }catch(IOException e){
             e.printStackTrace();
         }

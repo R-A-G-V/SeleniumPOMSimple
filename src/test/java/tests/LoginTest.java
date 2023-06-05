@@ -16,4 +16,12 @@ public class LoginTest extends Base{
         Assert.assertEquals("Login Successfully", homeLoginPage.getMensajeExito());
     }
 
+    @Test
+    public void TestLoginFallido(){
+        LoginPage loginPage = homePage.clickInicio();
+        loginPage.iniciarSesion("tesqt","test");
+        //verificacion
+        Assert.assertEquals("Enter your userName and password correct",loginPage.getMensajeError());
+    }
+
 }

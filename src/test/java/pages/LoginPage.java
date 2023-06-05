@@ -26,7 +26,7 @@ public class LoginPage {
         return new HomeLoginPage(driver);
     }
     //metodo para devolver texto
-    public  String getMensajeError(){
+    public String getMensajeError(){
         return driver.findElement(txtMensajeError).getText();
     }
 

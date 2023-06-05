@@ -2,24 +2,36 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.Select;
-
 public class FlightsPage {
     private WebDriver driver;
-    private By radioOne=By.name("tripType");
-    private By SpassCount=By.name("passCount");
-    private By DepartingFrom=By.name("fromPort");
-    private By On= By.name("fromMonth");
-    private By ArrivingIn= By.name("toPort");
-    private By Returning= By.name("toMonth");
-    private By Returning2=By.name("toDay");
-    private By Airline=By.name("Airline");
+    private By radioOne=By.xpath("//input[contains(@value,'oneway')]");
+    private By ServiceClass= By.xpath("//input[contains(@value,'First')]");
     private By btnsiguiente= By.name("findFlights");
-
-    Select passengers= new Select(driver.findElement(SpassCount));
+    private By dropdowList_passa= By.xpath("/html/body/div[2]/table/tbody/tr/td[2]/table/tbody/tr[4]/td/table/tbody/tr/td[2]/table/tbody/tr[5]/td/form/table/tbody/tr[3]/td[2]/b/select/option[3]");
 
     public FlightsPage(WebDriver driver) {
         this.driver=driver;
+    }
+    //Flight Details
+    //click en Type= one way
+    public void clickTypeOneWay() throws InterruptedException {
+        driver.findElement(radioOne).click();
+        Thread.sleep(3000);
+    }
+    //Preferences
+    //Selecciona Service Class= Firts class
+    public void clickServiceClass_Firtsclass() throws InterruptedException {
+        driver.findElement(ServiceClass).click();
+        Thread.sleep(3000);
+    }
+    //selecciona pasajero
+    public void selectDropdownList_Passagers() throws InterruptedException {
+        driver.findElement(dropdowList_passa).click();
+        Thread.sleep(3000);
+    }
+
+    public void clickHomeFlightsPage(){
+        driver.findElement(btnsiguiente).click();
     }
 
 }
