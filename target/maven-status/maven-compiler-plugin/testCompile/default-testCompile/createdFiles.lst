@@ -1,0 +1,11 @@
+pages\BasePage.class
+tests\FlightsTests.class
+pages\HomeRegisterPage.class
+pages\LoginPage.class
+pages\RegisterPage.class
+tests\LoginTest.class
+tests\BaseTests.class
+tests\RegisterTest.class
+pages\HomeFlightsPage.class
+pages\HomeLoginPage.class
+pages\FlightsPage.class

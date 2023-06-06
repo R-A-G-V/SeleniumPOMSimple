@@ -12,7 +12,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="SeleniumPOMSimple" options="--add-exports jdk.rmic/sun.rmi.rmic=ALL-UNNAMED" />
+      <module name="SeleniumPOMSimple" options="" />
     </option>
   </component>
 </project>
