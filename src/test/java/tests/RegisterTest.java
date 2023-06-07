@@ -1,9 +1,6 @@
 package tests;
 
-import io.qameta.allure.Description;
-import io.qameta.allure.Severity;
-import io.qameta.allure.SeverityLevel;
-import io.qameta.allure.Step;
+import io.qameta.allure.*;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.HomeRegisterPage;
@@ -14,7 +11,9 @@ public class RegisterTest extends BaseTests {
     @Test(priority = 1, description = "Registro de usuario")
     @Severity(SeverityLevel.CRITICAL)
     @Description("Crear un usuario con pass y user")
-    @Step("Registro de usuario")
+    @Story("prueba 3")
+    @TmsLink("SKTH-2609")
+    @Owner("Rodrigo Gomez")
     public void registerExitoso() {
         RegisterPage register = basePage.clickbtnregistro();
         register.userInformation("hola", "hola", "hola");

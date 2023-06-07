@@ -7,7 +7,7 @@ import org.openqa.selenium.support.ui.Select;
 
 public class FlightsPage {
     private WebDriver driver;
-    private By radioOne=By.xpath("/html/body/div[2]/table/tbody/tr/td[2]/table/tbody/tr[4]/td/table/tbody/tr/td[2]/table/tbody/tr[5]/td/form/table/tbody/tr[2]/td[2]/b/font/input[2]");
+    private By radioOne=By.xpath("//input[@value='oneway']");
     private By ServiceClass= By.xpath("//input[contains(@value,'First')]");
     private By btnsiguiente= By.name("findFlights");
     private By spassagers= By.name("passCount");

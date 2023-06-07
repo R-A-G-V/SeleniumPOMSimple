@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 public class LoginPage {
     //variables
     private WebDriver driver;
-    private By txtUser= By.name("userName");
+    private By txtUser= By.id("jsbdjfb");
     private By txtPass= By.name("password");
     private By btnLogin= By.name("submit");
     private By txtMensajeError= By.xpath("/html/body/div[2]/table/tbody/tr/td[2]/table/tbody/tr[4]/td/table/tbody/tr/td[2]/table/tbody/tr[2]/td[3]/form/table/tbody/tr[4]/td/table/tbody/tr[3]/td[2]/span");
@@ -29,7 +29,5 @@ public class LoginPage {
     public String getMensajeError(){
         return driver.findElement(txtMensajeError).getText();
     }
-
-    //metodo registro
 
 }

@@ -1,9 +1,6 @@
 package tests;
 
-import io.qameta.allure.Description;
-import io.qameta.allure.Severity;
-import io.qameta.allure.SeverityLevel;
-import io.qameta.allure.Step;
+import io.qameta.allure.*;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.HomeLoginPage;
@@ -13,9 +10,11 @@ public class LoginTest extends BaseTests {
 
 
     @Test(priority = 2, description = "Ingresar con usuario correcto")
-    @Severity(SeverityLevel.CRITICAL)
+    @Severity(SeverityLevel.BLOCKER)
     @Description("Ingresar al sistema con el usuario recien creado")
-    @Step("Ingreso exitoso")
+    @Story("Login")
+    @TmsLink("SKTH-2607")
+    @Owner("Rodrigo Gomez")
     public void TestLoginExitoso(){
         LoginPage loginPage = basePage.clickInicio();
         loginPage.iniciarSesion("test","test");
@@ -28,6 +27,9 @@ public class LoginTest extends BaseTests {
     @Severity(SeverityLevel.CRITICAL)
     @Description("CNo debe de poder ingresar al sistema con el usuario incorrecto")
     @Step("No se pudo ingresar al sistema")
+    @Story("Login fallido")
+    @TmsLink("SKTH-2608")
+    @Owner("Rodrigo Gomez")
     public void TestLoginFallido(){
         LoginPage loginPage = basePage.clickInicio();
         loginPage.iniciarSesion("tesqt","test");

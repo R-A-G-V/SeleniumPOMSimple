@@ -36,7 +36,7 @@ public class BaseTests {
         driver.quit();
     }
     @AfterMethod
-    public void takeScreenshotfallido(ITestResult result){
+    public void takeScreenshot(ITestResult result){
         if (ITestResult.FAILURE==result.getStatus()){
             var camera = (TakesScreenshot)driver;
             File screenshot = camera.getScreenshotAs(OutputType.FILE);

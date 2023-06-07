@@ -1,9 +1,6 @@
 package tests;
 
-import io.qameta.allure.Description;
-import io.qameta.allure.Severity;
-import io.qameta.allure.SeverityLevel;
-import io.qameta.allure.Step;
+import io.qameta.allure.*;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.FlightsPage;
@@ -13,7 +10,11 @@ public class FlightsTests extends BaseTests {
     @Test(priority = 4, description = "Completar campos requeridos")
     @Severity(SeverityLevel.CRITICAL)
     @Description("Seleccionar las listas y completar los campos")
-    @Step("Completado correctamente")
+    @Story("Test")
+    @TmsLink("SKTH-2609")
+    @Owner("Rodrigo Gomez")
+
+
     public void TestFlights() throws InterruptedException {
         FlightsPage flightsPage= basePage.clickFlightsPage();
         flightsPage.clickTypeOneWay();
